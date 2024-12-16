@@ -13,7 +13,7 @@ export default function SearchNButton() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        dispatch(setCity(input));
+        dispatch(setCity(input.trim()));
         setInput(() => "");
       }}
       className="flex w-full gap-2"

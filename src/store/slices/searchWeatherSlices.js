@@ -11,10 +11,16 @@ const searchWeatherSlices = createSlice({
   },
   reducers: {
     setCity: (state, { payload }) => {
+      if (payload === "") return;
+      console.log(`"${payload}"`);
+
       state.city = payload;
     },
     removeError: (state) => {
       state.error = null;
+    },
+    setError: (state, { payload }) => {
+      state.error = payload;
     },
   },
   extraReducers: (builder) => {
@@ -34,5 +40,5 @@ const searchWeatherSlices = createSlice({
   },
 });
 
-export const { setCity, removeError } = searchWeatherSlices.actions;
+export const { setCity, removeError, setError } = searchWeatherSlices.actions;
 export default searchWeatherSlices.reducer;

@@ -13,9 +13,7 @@ const searchWeatherThunk = createAsyncThunk(
       );
 
       if (!response.ok) {
-        throw new Error(
-          `Tidak dapat menemukan "${city}" :( Tolong masukan input yang masuk akal T_T`
-        );
+        throw new Error(`): Tidak dapat menemukan "${city}" T_T`);
       }
 
       const data = await response.json(); // Parse JSON response
