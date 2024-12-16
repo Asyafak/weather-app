@@ -8,6 +8,7 @@ import Error from "./components/Error";
 
 import { searchWeatherThunk } from "./store/thunk/searchWeatherThunk";
 import { setError } from "./store/slices/searchWeatherSlices";
+import { setCity } from "./store/slices/searchWeatherSlices";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,8 +31,10 @@ function App() {
 
       const data = await response.json();
       localStorage.setItem("userLocation", data.city);
+      dispatch(setCity(data.city));
     } catch (error) {
       dispatch(setError(error));
+      dispatch(setCity("bandung"));
     }
   };
 
@@ -41,11 +44,15 @@ function App() {
       searchUserLocation();
       return;
     }
-    dispatch(searchWeatherThunk(userLocation));
+    dispatch(setCity(userLocation));
   }, []);
 
   useEffect(() => {
-    dispatch(searchWeatherThunk(city));
+    console.log("ga masuk");
+    if (city) {
+      console.log("masuk");
+      dispatch(searchWeatherThunk(city));
+    }
   }, [city]);
 
   return (

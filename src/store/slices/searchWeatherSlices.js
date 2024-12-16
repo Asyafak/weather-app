@@ -6,7 +6,7 @@ const searchWeatherSlices = createSlice({
   name: "weather-search",
   initialState: {
     data: null,
-    city: "bandung",
+    city: "",
     error: null,
   },
   reducers: {
