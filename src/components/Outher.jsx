@@ -13,11 +13,11 @@ export default function Outher() {
             <span>{data.clouds.all}%</span>
           </div>
           <div className="relative flex text-slate-50 px-4">
-            <img src="/public/humidity.png" alt="" />
+            <img src="/humidity.png" alt="" />
             <span>{data.main.humidity}%</span>
           </div>
           <div className="relative flex text-slate-50 px-4">
-            <img src="/public/wind.png" alt="" />
+            <img src="/wind.png" alt="" />
             <span>{data.wind.speed} km/h</span>
           </div>
         </div>
