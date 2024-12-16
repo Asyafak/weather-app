@@ -1,3 +1,6 @@
+const API_URL = import.meta.env.VITE_WEATHER_URL;
+const API_KEY = import.meta.env.VITE_WEATHER_KEY;
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Define thunk
@@ -6,7 +9,7 @@ const searchWeatherThunk = createAsyncThunk(
   async (city, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a33a2b453b59451642036751bb35efaa&units=metric`
+        `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`
       );
 
       if (!response.ok) {

@@ -9,7 +9,7 @@ export default function Outher() {
         <div className="relative flex w-full h-12 shadow rounded-full items-center justify-between">
           <div className="absolute inset-0 bg-slate-900 opacity-30 rounded-full"></div>
           <div className="relative flex text-slate-50 px-4">
-            <img src="/public/rain.png" alt="" />
+            <img src="/rain.png" alt="" />
             <span>{data.clouds.all}%</span>
           </div>
           <div className="relative flex text-slate-50 px-4">

@@ -8,7 +8,7 @@ export default function MainWeather() {
       {data && (
         <>
           <img
-            src={`/public/${data.weather[0].icon}.png`}
+            src={`/${data.weather[0].icon}.png`}
             width="150"
             height="150"
             alt="weather"
