@@ -21,7 +21,7 @@ Aplikasi sederhana untuk menampilkan cuaca terkini berdasarkan lokasi pengguna. 
 1. Clone repositori:
 
    ```bash
-   git clone https://github.com/username/weather-app.git
+   git clone https://github.com/Asyafak/weather-app.git
    ```
 
 2. masuk ke directori
