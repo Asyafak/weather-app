@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-night {
+  @apply bg-gradient-to-t from-blue-700 to-indigo-950;
+}
+
+.bg-light {
+  @apply bg-gradient-to-t from-cyan-500 to-blue-500;
+}
